@@ -1,0 +1,193 @@
+@import 'one-dark.css';
+
+*{
+    border: none;
+    border-radius: 0px;
+    font-family:"Adwaita Sans","JetBrainsMono Nerd Font Propo","sans-serif";
+    font-size:15px;
+    font-weight:bold;
+    min-height:0;
+    padding:0;
+    margin:0;
+
+}
+window#waybar{
+    background:transparent;
+}
+tooltip{
+    background:@bg0;
+    border:1px solid @bg3;
+    border-radius:12px;
+}
+tooltip label{
+    color:@fb;
+    padding:6px;
+}
+
+#workspaces{
+    background-color: @bg0;
+    padding:5px 3px;
+    margin:0 0 0 12px;
+    border-radius:18px;
+    border:1px solid @bg1;
+    color:@fg;
+}
+
+#workspaces button{
+    padding:0px 6px;
+    margin:0px 3px;
+    border-radius:50px;
+    color:transparent;
+    background:@bg1;
+    transition: all 0.3s ease-in-out;
+}
+
+#workspaces button.active{
+    background-color:@blue;
+    color: @bg0;
+    min-width:50px;
+    transition: all 0.3s ease-in-out;
+    font-size:13px;
+}
+#workspaces button:hover{
+    background-color:@purple;
+    color:@bg0;
+    border-radius:16px;
+    min-width:50px;
+    background-size:400% 400%;
+}
+
+#workspaces button.urgent{
+    background-color:@red;
+    color:@bg0;
+    border-radius:16px;
+    min-width:50px;
+    background-size:400% 400%;
+    transition: all 0.3s ease-in-out;
+}
+
+#battery,
+#backlight,
+#backlight-slider,
+#pulseaudio,
+#network,
+#clock,
+#bluetooth,
+#custom-notification{
+    background-color:@bg0;
+    padding:0 15px 0 15px;
+    margin: 0 0 0 12px;
+    border-radius: 50px;
+    border: 1px solid @bg1;
+}
+#clock{
+    color:@blue;
+}
+#custom-notification{
+    color:@fg;
+    margin:0 10px 0 10px;
+}
+#pulseaudio{
+    color: @yellow;
+}
+#network{
+    color:@purple;
+}
+#battery{
+    color:@green;
+}
+
+
+
+
+#pulseaudio-slider {
+    padding: 0;
+    margin-left: 10px;
+}
+#pulseaudio-slider slider {
+    min-height: 0px;
+    min-width: 0px;
+    opacity: 0;
+    background-image: none;
+    border: none;
+    box-shadow: none;
+}
+#pulseaudio-slider trough {
+    min-height: 10px;
+    min-width: 80px;
+    border-radius: 5px;
+    background: black;
+}
+#pulseaudio-slider highlight {
+    min-width: 10px;
+    border-radius: 5px;
+    background: @yellow;
+}
+
+
+#bluetooth.disabled,
+#bluetooth.no-controller {
+  color: @grey2;            /* muted gray */
+}
+
+#bluetooth.off {
+  color: @red;            /* red */
+  background: rgba(243, 139, 168, 0.15);
+}
+
+#bluetooth.on {
+  color: @blue;            /* blue */
+  background: rgba(137, 180, 250, 0.15);
+}
+
+#bluetooth.connected {
+  color: @green;            /* green */
+  background: rgba(166, 227, 161, 0.20);
+}
+
+#bluetooth.discoverable {
+  color: @yellow;            /* yellow */
+  background: rgba(249, 226, 175, 0.18);
+}
+
+#bluetooth.discovering {
+  color: @purple;            /* purple */
+  background: rgba(203, 166, 247, 0.20);
+  animation: bt-pulse 1.2s infinite;
+}
+
+#bluetooth.pairable {
+  color: @orange;            /* orange */
+  background: rgba(250, 179, 135, 0.18);
+}
+
+@keyframes bt-pulse {
+  0%   { opacity: 1; }
+  50%  { opacity: 0.55; }
+  100% { opacity: 1; }
+}
+
+
+#backlight-slider slider {
+    min-height: 0px;
+    min-width: 0px;
+    opacity: 0;
+    background-image: none;
+    border: none;
+    box-shadow: none;
+    background: none;
+}
+#backlight-slider trough {
+    min-height: 10px;
+    min-width: 80px;
+    border-radius: 5px;
+    background: black;
+}
+#backlight-slider highlight {
+    min-width: 10px;
+    border-radius: 5px;
+    background: @blue;
+}
+#backlight{
+	color:@blue;
+}
