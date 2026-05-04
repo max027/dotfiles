@@ -86,3 +86,10 @@ vim.keymap.set("n", "<leader>lx", function()
     })
 end, { desc = "Toggle LSP diagnostics" })
 
+vim.keymap.set("n", "<A-q>", function()
+  if vim.bo.filetype == "netrw" then
+    vim.cmd("bd")
+  else
+    vim.cmd("Explore")
+  end
+end, { silent = true })
